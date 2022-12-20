@@ -1,1 +1,32 @@
-# backstage-plugin
+# hoop
+
+Welcome to the hoop plugin!
+
+## Getting Started
+
+To get started, you will need install the plugin into your app:
+
+```bash
+# From your Backstage root directory
+yarn add --cwd packages/app @hoop/backstage-hoop
+```
+
+Modify your app routes in `App.tsx` to include the `HoopPage` component exported from the plugin, for example:
+
+```tsx
+// In packages/app/src/App.tsx
+import { HoopPage } from '@hoop/backstage-hoop';
+
+const routes = (
+  <FlatRoutes>
+    {/* ...other routes */}
+    <Route path="/hoop" element={<HoopPage />} />
+```
+
+Then configure the `hoop` URL and the `hoop` token in your [`app-config.yaml`](https://github.com/backstage/backstage/blob/master/app-config.yaml).
+
+```yaml
+hoop:
+  baseUrl: http://your-service-url
+  token: yourTokenHere
+```
