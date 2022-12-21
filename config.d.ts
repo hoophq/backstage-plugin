@@ -1,10 +1,15 @@
 export interface Config {
     hoop: {
         /**
-        * Configuration options used to generate analytics graphs
+        * BaseUrl is the api address
         * @visibility frontend
         */
         baseUrl: string;
+
+        /**
+        * token is the one which allows to access the api adress
+        * @visibility frontend
+        */
         token: string;
     };
 }
