@@ -15,7 +15,7 @@ Modify your app routes in `App.tsx` to include the `HoopPage` component exported
 
 ```tsx
 // In packages/app/src/App.tsx
-import { HoopPage } from '@hoop/backstage-hoop';
+import { HoopPage } from '@hoophq/backstage-plugin';
 
 const routes = (
   <FlatRoutes>
