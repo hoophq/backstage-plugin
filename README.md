@@ -8,7 +8,7 @@ To get started, you will need install the plugin into your app:
 
 ```bash
 # From your Backstage root directory
-yarn add --cwd packages/app @hoop/backstage-hoop
+yarn add --cwd packages/app @hoophq/backstage-plugin
 ```
 
 Modify your app routes in `App.tsx` to include the `HoopPage` component exported from the plugin, for example:
