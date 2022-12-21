@@ -4,6 +4,6 @@ import { ConnectionsList } from './components/Connections/ConnectionList';
 
 export const Router = () => (
   <Routes>
-    <Route path="/" element={<ConnectionsList />} />
+    <Route path='/' element={<ConnectionsList />} />
   </Routes>
 );

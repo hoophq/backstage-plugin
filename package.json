@@ -1,8 +1,8 @@
 {
   "name": "@hoophq/backstage-plugin",
-  "version": "0.1.0",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "version": "0.1.1",
+  "main": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
   "license": "MIT",
   "publishConfig": {
     "access": "public",
@@ -32,6 +32,7 @@
   },
   "peerDependencies": {
     "react": "^16.13.1 || ^17.0.0",
+    "react-router": "6.0.0-beta.0 || ^6.3.0",
     "react-router-dom": "6.0.0-beta.0 || ^6.3.0"
   },
   "devDependencies": {
@@ -44,29 +45,13 @@
     "@testing-library/user-event": "^14.0.0",
     "@types/node": "*",
     "msw": "^0.47.0",
+    "react-router": "^6.3.0",
+    "react-router-dom": "^6.3.0",
     "cross-fetch": "^3.1.5"
   },
   "files": [
-    "dist"
+    "dist",
+    "config.d.ts"
   ],
-  "configSchema": {
-    "$schema": "https://backstage.io/schema/config-v1",
-    "title": "@backstage/hoop",
-    "type": "object",
-    "properties": {
-      "hoop": {
-        "type": "object",
-        "properties": {
-          "baseUrl": {
-            "type": "string",
-            "visibility": "frontend"
-          },
-          "token": {
-            "type": "string",
-            "visibility": "frontend"
-          }
-        }
-      }
-    }
-  }
+  "configSchema": "config.d.ts"
 }
