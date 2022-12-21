@@ -34,7 +34,7 @@ type ConnectionItemCardProps = {
 
 export const ConnectionItemCard = ({ connection, openModal }: ConnectionItemCardProps) => {
   return (
-    <Card key={connection.id}>
+    <Card>
       <CardContent>
         <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
           <Box>
@@ -102,7 +102,7 @@ export const ConnectionsList = () => {
     <>
       <ItemCardGrid>
         {(value || []).map((connection) => (
-          <ConnectionItemCard connection={connection} openModal={openModal} />
+          <ConnectionItemCard key={connection.id} connection={connection} openModal={openModal} />
         ))}
       </ItemCardGrid>
       <Modal

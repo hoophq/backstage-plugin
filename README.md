@@ -30,3 +30,22 @@ hoop:
   baseUrl: http://your-service-url
   token: yourTokenHere
 ```
+
+Add a link to the sidebar:
+
+```ts
+// packages/app/src/components/Root/Root.tsx
+import ExtensionIcon from '@material-ui/icons/ExtensionIcon';
+
+export const Root = ({ children }: PropsWithChildren<{}>) => (
+  <SidebarPage>
+    <Sidebar>
+      // ...
+      <SidebarItem icon={ExtensionIcon} to='hoop' text='Hoop' />
+      // ...
+    </Sidebar>
+  </SidebarPage>
+);
+```
+
+You can now navigate to the Hoop page from your app's sidebar!
